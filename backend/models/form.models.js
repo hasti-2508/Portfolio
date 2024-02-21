@@ -10,7 +10,14 @@ const userSchema = new mongoose.Schema({
     required: [true, "Please Enter your email"]
  },
  phoneNo:{
-    type: String,
+    type: Number,
     required: [true, "Please Enter your phone number."]
  }
 });
+
+
+module.exports = mongoose.model("User", userSchema)
+
+
+//type: mongoose.Schema.types.ObjectID
+// ref: "User"
